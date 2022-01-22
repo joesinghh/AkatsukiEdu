@@ -28,17 +28,17 @@
         <div class="links">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'about' %}">About Us</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About Us</a>
                 </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'signup' %}" aria-current="page">Sign Up</a>
+                    <a class="nav-link" href="{% url 'signup' %}" aria-current="page">Sign Up</a>
                 </li>
             </ul>
         </div>
@@ -57,7 +57,7 @@
         <div class="v8_440">
             <div class="v8_441"><span class="v8_442"><a href="">Company</a></span>
                 <div class="v8_443"><span class="v8_444"><a href="">About Us</a></span><span class="v8_445"><a
-                            href="">Blog</a></span><span class="v8_447"><a href="">Contact Us</a></span></div>
+                            href="">Blog</a></span><span class="v8_447"><a href="{% url 'contact' %}">Contact Us</a></span></div>
             </div>
             <div class="v25_132"><span class="v25_133"><a href="">Courses</a></span>
                 <div class="v25_134"><span class="v25_135"><a href="">Course List</a></span></div>

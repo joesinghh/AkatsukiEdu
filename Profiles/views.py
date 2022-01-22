@@ -44,3 +44,5 @@ def my_courses(request):
 @login_required
 def course_content(request):
     return render(request, 'Course.html')
+def contact(request):
+    return render(request, "contactus.html")
