@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,8 +42,10 @@
     </div>
     <div class="content">
         <img src="../static/Images/sign-up-banner.png" width="900px" height="550px">
-        <div class="registration-form">
-            <p>Welcome Back</p>
+        <form class="registration-form" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!-- <p>Welcome Back</p>
             <h1>Registration Page</h1>
             <h5>Name</h5>
             <input type="text" class="input-field"></input>
@@ -56,11 +59,18 @@
                     Join as a teacher
                 </label><br>
             </div>
+            <div class="radio-input">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    I am a teacher
+                </label>
+            </div> -->
+
             <button>Register</button>
             <p class="login">
                 Already a member?<a href="./LoginPage.html"> Login here</a>
             </p>
-        </div>
+        </form>
     </div>
 </body>
 </html>
