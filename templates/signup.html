@@ -15,7 +15,7 @@
     <div class="header">
         <nav class="navbar navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand name-text" href="index.html">
+                <a class="navbar-brand name-text" href="{% url 'home' %}">
                     <img src="../static/Images/Logo.png" alt="" width="60" height="60" class="d-inline-block">
                     <span>Akatsuki</span>
                 </a>
@@ -43,6 +43,7 @@
         <img src="../static/Images/sign-up-banner.png" width="900px" height="550px">
         <form class="registration-form" method="POST">
             {% csrf_token %}
+            
             {{ form.as_p }}
             <!-- <p>Welcome Back</p>
             <h1>Registration Page</h1>

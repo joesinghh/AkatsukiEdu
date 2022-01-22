@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +19,7 @@
     <div class="header">
         <nav class="navbar navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand name-text" href="index.html">
+                <a class="navbar-brand name-text" href="{% url 'home' %}">
                     <img src="../static/Images/Logo.png" alt="" width="60" height="60" class="d-inline-block">
                     <span>Akatsuki</span>
                 </a>
@@ -36,7 +38,7 @@
                     <a class="nav-link" href="./LoginPage.html" aria-current="page">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./SignUpPage.html" aria-current="page">Sign Up</a>
+                    <a class="nav-link" href="{% url 'signup' %}" aria-current="page">Sign Up</a>
                 </li>
             </ul>
         </div>
