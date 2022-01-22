@@ -21,6 +21,7 @@ def tregister(request):
     if form.is_valid():
         obj = form.save(commit=False)
         obj.is_teacher = True
+        obj.is_verified = False
         obj.save()
         form=CreateTeacherForm()
         return redirect('login')

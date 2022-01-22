@@ -44,7 +44,9 @@ class User(AbstractBaseUser):
     admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=True)
     # profile_img  = models.ImageField(default='',null=True)
+    document = models.FileField(upload_to='docs', default=None, null=True, blank=True)
 
     objects = UserManager()
 

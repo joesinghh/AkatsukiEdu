@@ -13,7 +13,7 @@ class AccountAdmin(UserAdmin):
 
     fieldsets = ()
     filter_horizontal = ()
-    list_filter = ('is_teacher',)
+    list_filter = ('is_teacher', 'is_verified')
 
 admin.site.register(User, AccountAdmin)
 

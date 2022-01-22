@@ -32,6 +32,7 @@ class CreateTeacherForm(UserCreationForm):
             'email',
             'password1',
             'password2',
+            'document'
             
         ]
 
