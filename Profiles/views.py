@@ -32,14 +32,5 @@ def tregister(request):
 def dashboard(request):
     return render(request, 'HomePage.html')
 
-@login_required
-def UserListView(request):
-    user=User.objects.get(username=request.user)
-    post=UserPost.objects.filter(artist=request.user)
-    # following_ = Following.objects.get(user=request.user) 
-    total=len(post)
-    profile = Profile.objects.get(user=user)
-    following_obj = Following.objects.get(user = user)
-    follower,following = following_obj.follower.count(), following_obj.following.count()
-    
-    return render(request,'profile.html',locals())
+def about(request):
+    return render(request, "about.html")

@@ -1,0 +1,24 @@
+.modal {
+    font-family: 'Manrope';
+}
+
+.label, .form-control {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.input-field {
+    width: 400px;
+}
+
+.new-chapter {
+    margin-top: 20px;
+}
+
+.modal-button {
+    display: flex;
+    justify-content: center;
+    font-family: 'Manrope';
+}
+
