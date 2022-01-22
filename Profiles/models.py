@@ -12,7 +12,7 @@ class UserManager(BaseUserManager):
 
         usr = self.model(
             username = username,
-            email= self.normalise_email(email)
+            email= self.normalize_email(email)
         )
 
         usr.set_password(password)
@@ -26,10 +26,12 @@ class UserManager(BaseUserManager):
 
         usr = self.model(
             username = username,
-            email= self.normalise_email(email)
+            email= self.normalize_email(email)
         )
 
-        usr.is_admin = True
+        usr.admin = True
+        usr.staff = True
+        usr.set_password(password)
         usr.save(using=self._db)
 
         return usr
@@ -39,14 +41,16 @@ class User(AbstractBaseUser):
     username= models.CharField(max_length=20, unique=True, verbose_name='username')
     email = models.EmailField(verbose_name='email', max_length=50, unique=True)
     is_teacher = models.BooleanField(default=False)
-    is_admin = models.BooleanField(default=False)
+    admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
+    staff = models.BooleanField(default=False)
     # profile_img  = models.ImageField(default='',null=True)
 
     objects = UserManager()
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FILEDS = ['username', 'email']
+    REQUIRED_FIELDS = ['email']
+    #  REQUIRED_FIELDS
 
     def __str__(self):
         return self.username
@@ -54,7 +58,14 @@ class User(AbstractBaseUser):
     def has_perm(self, perm, obj=None, *args, **kargs):
         return self.is_active
 
+    def has_module_perms(self, app_label):
+        return True
+
     @property
-    def check_admin_perm(self):
-        return self.is_admin
+    def is_admin(self):
+        return self.admin
+
+    @property
+    def is_staff(self):
+        return self.staff
 
