@@ -31,3 +31,6 @@ def tregister(request):
 
 def dashboard(request):
     return render(request, 'HomePage.html')
+
+def about(request):
+    return render(request, "about.html")
