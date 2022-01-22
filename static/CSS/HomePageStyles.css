@@ -1,0 +1,21 @@
+.courses-list {
+    font-family: 'Manrope';
+    margin: 50px 120px;
+}
+
+.list-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.course-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background-color: #07065D;
+    border-color: #07065D;
+}
