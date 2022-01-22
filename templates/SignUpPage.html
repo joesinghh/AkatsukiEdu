@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/CSS/SignUpPageStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+	<title>Akatsuki</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand name-text" href="index.html">
+                    <img src="../static/Images/Logo.png" alt="" width="60" height="60" class="d-inline-block">
+                    <span>Akatsuki</span>
+                </a>
+            </div>
+        </nav>
+        <div class="links">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./LandingPage.html">Home</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href=".#">About Us</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./LoginPage.html">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" aria-current="page">Sign Up</a>
+                </li>
+              </ul>
+        </div>
+    </div>
+    <div class="content">
+        <img src="../static/Images/sign-up-banner.png" width="900px" height="550px">
+        <div class="registration-form">
+            <p>Welcome Back</p>
+            <h1>Registration Page</h1>
+            <h5>Name</h5>
+            <input type="text" class="input-field"></input>
+            <h5>Email</h5>
+            <input type="email" class="input-field"></input>
+            <h5>Password</h5>
+            <input type="password" class="input-field"></input><br>
+            <div class="radio-input">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    I am a student
+                </label><br>
+            </div>
+            <div class="radio-input">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    I am a teacher
+                </label>
+            </div>
+            <button>Register</button>
+            <p class="login">
+                Already a member?<a href="./LoginPage.html"> Login here</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

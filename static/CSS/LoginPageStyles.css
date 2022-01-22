@@ -1,0 +1,88 @@
+html, body {
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    margin: 0px 120px;
+}
+
+.name-text {
+    font-family: 'Manrope';
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.name-text span {
+    margin-left: 16px;
+}
+
+.nav {
+    display: flex;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 20px;
+    font-family: 'Manrope';
+    font-weight: bold;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #07065D;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 80px;
+    font-family: 'Manrope';
+}
+
+.login-form {
+    margin-top: 100px;
+}
+
+.input-field {
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-left: 8px;
+    width: 300px;
+}
+
+.login-form h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.login-form button {
+    width: 300px;
+    height: 35px;
+    font-size: 16px;
+    background-color: #0E1237;
+    border-radius: 5px;
+    color: white;
+    margin-top: 40px;
+}
+
+.signup {
+    font-size: 12px;
+    margin-top: 40px;
+    width: 300px;
+    text-align: center;
+}

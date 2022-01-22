@@ -39,6 +39,10 @@ html, body {
     color: black;
 }
 
+.nav-pills .nav-link.active {
+      background-color: #07065D;
+  }
+
 .content {
     display: flex;
     justify-content: space-between;
