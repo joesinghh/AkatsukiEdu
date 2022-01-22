@@ -1,0 +1,22 @@
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-control {
+    width: 500px;
+}
+
+.search-btn {
+    width: 77px;
+    height: 39px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.search-btn:hover {
+    background-color: #0E1237;
+    color: white;
+}
