@@ -16,3 +16,6 @@ def register(request):
 
     return render(request,'SignUpPage.html',{'form':form})
 
+
+def dashboard(request):
+    return render(request, 'HomePage.html')
