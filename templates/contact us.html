@@ -52,11 +52,11 @@
       	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15554.223841060108!2d77.6061888!3d12.9362362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x88518f37b39dabd0!2sChrist%20(Deemed%20to%20be%20University)!5e0!3m2!1sen!2sin!4v1642857008423!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div class="column">
-      <form action="log.php">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Enter Your First Name">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Enter Your Second Name">
+      <form action="feed.php" method="POST">
+        <label for="fname">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Your Name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email ID">
         <label for="country">Country</label>
         <select id="country" name="country">
           <option value="india">India</option>
