@@ -9,5 +9,6 @@ urlpatterns = [
     path('tsignup', views.tregister, name='tsignup'),
     path('login',auth_views.LoginView.as_view(template_name='LoginPage.html',authentication_form=Login),name='login'),
     path('home', views.dashboard, name='dashboard'),
+    path('about' , views.about, name='about'),
 
 ]
