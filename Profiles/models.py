@@ -21,7 +21,7 @@ class UserManager(BaseUserManager):
         return usr
 
     def create_superuser(self, username, email, password=None):
-         if not email:
+        if not email:
             raise ValueError("Missing email to create user")
 
         usr = self.model(
