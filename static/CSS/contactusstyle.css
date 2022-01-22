@@ -1,0 +1,114 @@
+* 
+{
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea 
+{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] 
+{
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover 
+{
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.column 
+{
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+.row:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) 
+{
+  .column, input[type=submit] 
+  {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+html, body {
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 120px;
+}
+
+.name-text {
+    font-family: 'Manrope';
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.name-text span {
+    margin-left: 16px;
+}
+
+.nav {
+    display: flex;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 20px;
+    font-family: 'Manrope';
+    font-weight: bold;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #07065D;
+}
+
+.buttons 
+{
+    width: 196px;
+    height: 62px;
+    background: #0E1237;
+    border-radius: 8px;
+    margin-right: 25px;
+    color: white;
+}
