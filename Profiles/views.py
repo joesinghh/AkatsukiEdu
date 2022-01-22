@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .forms import CreateUserForm
+from .forms import CreateUserForm, CreateTeacherForm
 
 # Create your views here.
 
@@ -15,6 +15,17 @@ def register(request):
         return redirect('login')
 
     return render(request,'SignUpPage.html',{'form':form})
+
+def tregister(request):
+    form = CreateTeacherForm(request.POST or None)
+    if form.is_valid():
+        obj = form.save(commit=False)
+        obj.is_teacher = True
+        obj.save()
+        form=CreateTeacherForm()
+        return redirect('login')
+
+    return render(request,'TeacherSignUp.html',{'form':form})
 
 
 def dashboard(request):

@@ -17,11 +17,25 @@ class CreateUserForm(UserCreationForm):
             'email',
             'password1',
             'password2',
-            'is_teacher'
             
         ]
 
-class login(AuthenticationForm):
+class CreateTeacherForm(UserCreationForm):
+    email=forms.EmailField(widget=TextInput(attrs={'placeholder':'Email'}),required=True)
+    username=forms.CharField(widget=TextInput(attrs={'class':'validate','placeholder':'Username'}))
+    password1=forms.CharField(widget=PasswordInput(attrs={'placeholder':'Password'}))
+    password2=forms.CharField(widget=PasswordInput(attrs={'placeholder':'Confirm Password'}))
+    class Meta:
+        model=User
+        fields=[
+            'username',
+            'email',
+            'password1',
+            'password2',
+            
+        ]
+
+class Login(AuthenticationForm):
     username=forms.CharField(label=None,widget=TextInput(attrs={'class':'validate','placeholder':'Username'}))
     password=forms.CharField(label=None,widget=PasswordInput(attrs={'class':'password','placeholder':'Password'}))
 
