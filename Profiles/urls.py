@@ -11,4 +11,7 @@ urlpatterns = [
     path('home', views.dashboard, name='dashboard'),
     path('about' , views.about, name='about'),
 
-]
+    # path('mycourses',),
+    # path('course<int:pk>',),
+
+] 

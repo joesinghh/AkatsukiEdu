@@ -4,7 +4,7 @@ from django import forms
 from validate_email import validate_email
 from django.forms.widgets import PasswordInput,TextInput
 import requests
-
+ 
 class CreateUserForm(UserCreationForm):
     email=forms.EmailField(widget=TextInput(attrs={'placeholder':'Email'}),required=True)
     username=forms.CharField(widget=TextInput(attrs={'class':'validate','placeholder':'Username'}))

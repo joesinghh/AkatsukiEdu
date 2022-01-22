@@ -71,3 +71,14 @@ class User(AbstractBaseUser):
     def is_staff(self):
         return self.staff
 
+
+class Course(models.Model):
+    cover = models.ImageField(upload_to='cover')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=20)
+    students = models.ManyToManyField(User, related_name='joined_by', blank=True)
+
+class Chapter(models.Model):
+    video = models.FileField(upload_to='videos')
+    title = models.CharField(max_length=20)
+    content = models.TextField(blank=True)
