@@ -15,7 +15,7 @@
     <div class="header">
         <nav class="navbar navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand name-text" href="index.html">
+                <a class="navbar-brand name-text" href="{% url 'home' %}">
                     <img src="../static/Images/Logo.png" alt="" width="60" height="60" class="d-inline-block">
                     <span>Akatsuki</span>
                 </a>
@@ -24,30 +24,34 @@
         <div class="links">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="./about.html">About Us</a>
+                  <a class="nav-link" aria-current="page" href="#">About Us</a>
                 </li>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="#">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./SignUpPage.html">Sign Up</a>
+                  <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
                 </li>
               </ul>
         </div>
     </div>
     <div class="content">
         <img src="../static/Images/login-banner-image.png" width="900px" height="580px"> 
-        <div class="login-form">
+        <form class="login-form" method="POST">
+            {% csrf_token %}
+            
             <p>Welcome Back</p>
             <h1>Login to your account</h1>
-            <h5>Email</h5>
+            {{form}}
+
+            <!-- <h5>Email</h5>
             <input type="email" class="input-field"></input>
             <h5>Password</h5>
-            <input type="password" class="input-field"></input><br>
+            <input type="password" class="input-field"></input><br> -->
             <button>Login Now</button>
             <p class="signup">
                 Don't have an account?<a href="./SignUpPage.html"> Join Now</a>

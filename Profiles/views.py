@@ -12,7 +12,7 @@ def register(request):
     if form.is_valid():
         form.save()
         form=CreateUserForm()
-        messages.success(request,'registration successful login now')
-        return redirect('home')
+        return redirect('login')
 
     return render(request,'SignUpPage.html',{'form':form})
+

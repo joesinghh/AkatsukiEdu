@@ -20,13 +20,9 @@ class CreateUserForm(UserCreationForm):
             'is_teacher'
             
         ]
-    def clean_email(self,*args,**kwargs):
-        cleaned_data = super(CreateUserForm, self).clean()
-        email = cleaned_data.get("email")
-        
-        response = requests.get("https://apilayer.net/api/check?access_key=a448482d0743db46d06084a7c97f32c9&email={}".format(email))
-        dic = response.json()
-        if dic['smtp_check']==True and dic['format_valid']==True and dic['mx_found']==True:
-            return email
-        else:
-            raise forms.ValidationError("Invalid Email")
+
+class login(AuthenticationForm):
+    username=forms.CharField(label=None,widget=TextInput(attrs={'class':'validate','placeholder':'Username'}))
+    password=forms.CharField(label=None,widget=PasswordInput(attrs={'class':'password','placeholder':'Password'}))
+
+    
