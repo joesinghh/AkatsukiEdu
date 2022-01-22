@@ -1,0 +1,56 @@
+.course-header {
+    height: 280px;
+    background-color: #0E1237;
+    font-family: 'Manrope';
+}
+
+.course-header-info {
+    display: flex;
+    margin: 0px 100px;
+    color: white;
+    justify-content: space-around;
+}
+
+.course-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.course-image {
+    margin: 25px 0px;
+}
+
+.course-content {
+    margin: 70px 170px;
+    font-family: 'Manrope';
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-content .syllabus {
+    margin-top: 25px;
+}
+
+.chapterTitles {
+    width: 500px;
+    height: 35px;
+    text-align: left;
+    border: 2px solid gray;
+    margin: 10px 0px;
+}
+
+.card {
+    margin-top: 50px;
+    height: 130px;
+    border: 2px solid gray;
+}
+
+.btn {
+    margin-top: 20px;
+    background-color: #0E1237;
+    color: white;
+}
