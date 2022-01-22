@@ -1,5 +1,7 @@
 # Akatsuki_URH
 
+A web app built for the [UnScript Rookies Hackathon 2k22](https://unscript-rookies.netlify.app/).
+
 ### Install requirements
 `python install -r requirements.txt`
 
