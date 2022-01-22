@@ -15,4 +15,4 @@ def register(request):
         messages.success(request,'registration successful login now')
         return redirect('home')
 
-    return render(request,'signup.html',{'form':form})
+    return render(request,'SignUpPage.html',{'form':form})
