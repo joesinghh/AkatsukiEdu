@@ -77,6 +77,7 @@ class Course(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
     students = models.ManyToManyField(User, related_name='joined_by', blank=True)
+    date_created = models.DateTimeField(auto_now_add=True)
 
 class Chapter(models.Model):
     video = models.FileField(upload_to='videos')
