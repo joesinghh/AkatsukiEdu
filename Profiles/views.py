@@ -5,8 +5,13 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView,CreateView,DeleteView,UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import *
+from django.conf import settings
+import razorpay
+
 # Create your views here.
 from .forms import CreateTeacherForm
+razorpay_client = razorpay.Client(
+    auth=(settings.RAZOR_KEY_ID, settings.RAZOR_KEY_SECRET))
 
 def home(request):
     return render(request, "index.html")
@@ -55,8 +60,15 @@ def my_courses(request):
 
 @login_required
 def course_content(request, pk):
+    
+
     scourse = Course.objects.get(id=pk)
     user = User.objects.get(username=request.user)
+    razorpay_order = razorpay_client.order.create(dict(amount=100000,
+                                                       currency="INR",
+                                                       payment_capture='0'))
+    razorpay_order_id = razorpay_order['id']
+
     return render(request, "Course.html", locals())
 
 def contact(request):
