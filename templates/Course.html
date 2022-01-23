@@ -46,12 +46,12 @@
     <div class="course-header">
         <div class="course-header-info">
             <div class="course-title">
-                <h3>Course Title</h3>
-                <p>About the course</p>
+                <h3>{{ scourse.title }}</h3>
+                <p>{{ scourse.date_created }}</p>
             </div>
             <div class="course-image">
                 <img src="../static/Images/User.png">
-                <p class="text-center">Name of Instructor</p>
+                <p class="text-center">{{ scourse.author }}</p>
             </div>
         </div>
     </div>

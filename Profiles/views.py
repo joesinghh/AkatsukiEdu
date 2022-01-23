@@ -41,8 +41,9 @@ def my_courses(request):
     return render(request, 'MyCoursesPage.html', locals())
 
 @login_required
-def course_content(request):
-    return render(request, 'Course.html')
+def course_content(request, pk):
+    scourse = Course.objects.get(id=pk)
+    return render(request, "Course.html", locals())
 
 def contact(request):
     return render(request, "contactus.html")
@@ -53,8 +54,7 @@ def terms(request):
 def browsecourses(request):
     return render(request, "BrowseCourses.html")
 
-def course(request):
-    return render(request, "Course.html")
+    
 
 def privacy(request):
     return render(request, "privacy.html")
