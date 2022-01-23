@@ -43,6 +43,13 @@
             </ul>
         </div>
     </div>
+    {% if user.is_teacher %}
+        {% if user.is_verified %}
+        
+        {% else %}
+        <p>You are not yet verified</p>
+        {% endif %}
+    {% else %}
     <div class="courses-list">
         <h3 class="list-title">List of your courses</h3>
         <div class="course-cards">
@@ -62,12 +69,15 @@
         <br><br>
         <a href="./BrowseCourses.html"><h5 class="text-center"><b>Explore more courses</b></h5></a>
     </div>
-    
+
     <div class="modal-button">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Add a new course
+            Create new course
         </button>
     </div>
+    {% endif %}
+    
+    
   
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

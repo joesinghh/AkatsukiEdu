@@ -36,6 +36,11 @@ class CreateTeacherForm(UserCreationForm):
             
         ]
 
+    def form_valid(self,form):
+        form.instance.is_verified=False
+        form.instance.is_teacher = True
+        return super().form_valid(form)
+
 class Login(AuthenticationForm):
     username=forms.CharField(label=None,widget=TextInput(attrs={'class':'validate','placeholder':'Username'}))
     password=forms.CharField(label=None,widget=PasswordInput(attrs={'class':'password','placeholder':'Password'}))

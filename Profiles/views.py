@@ -20,10 +20,7 @@ def register(request):
 def tregister(request):
     form = CreateTeacherForm(request.POST or None)
     if form.is_valid():
-        obj = form.save(commit=False)
-        obj.is_teacher = True
-        obj.is_verified = False
-        obj.save()
+        form.save()
         form=CreateTeacherForm()
         return redirect('login')
 
@@ -39,10 +36,12 @@ def about(request):
 
 @login_required
 def my_courses(request):
-    return render(request, 'MyCoursesPage.html')
+    user = User.objects.get(username=request.user)
+    return render(request, 'MyCoursesPage.html', locals())
 
 @login_required
 def course_content(request):
     return render(request, 'Course.html')
+
 def contact(request):
     return render(request, "contactus.html")
