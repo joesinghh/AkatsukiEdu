@@ -47,12 +47,8 @@
    <form method="POST">
        {% csrf_token %}
        {{form}}
-       <button>Edit Course</button>
+       <button>del Course</button>
    </form>
-
-   <input class='update' type="submit" value='update'>
-    <a class='delete' href='{% url "delcourse" object.id %}'>delete post
-     </a>
     
 </body>
 

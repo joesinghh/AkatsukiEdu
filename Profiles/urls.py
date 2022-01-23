@@ -14,9 +14,12 @@ urlpatterns = [
     path('terms' , views.terms, name='terms'),
     path('privacy' , views.privacy, name='privacy'),
     path('browsecourses' , views.browsecourses, name='browsecourses'),
-    # path('course' , views.CourseCreateView.as_view(template), name='create'),
-    
+
+    path('createcourse', views.CourseCreateView.as_view(template_name='CreateCourse.html'), name='createcourse'),
+    path('course/int:pk>/update', views.CourseUpdateView.as_view(template_name='EditCourse.html'), name='updatecourse'),
+    path('course/<int:pk>/del', views.CourseDeleteView.as_view(template_name='DelCourse.html'), name='delcourse'),
     path('mycourses',views.my_courses, name='mycourses'),
     path('course/<int:pk>',views.course_content, name='course'),
+        # path('course' , views.CourseCreateView.as_view(template), name='create'),
 
 ] 

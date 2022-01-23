@@ -45,6 +45,12 @@ def about(request):
 @login_required
 def my_courses(request):
     user = User.objects.get(username=request.user)
+    courses = Course.objects.all()
+    # c_list = []
+    # for i in courses:
+    #     if i.author==user.username:
+    #         c_list.append(i)
+
     return render(request, 'MyCoursesPage.html', locals())
 
 @login_required
@@ -71,6 +77,8 @@ class CourseCreateView(CreateView,LoginRequiredMixin):
     fields=[
         'cover',
         'title',
+        'desc',
+        'video'
         
     ]
     def form_valid(self,form):
@@ -86,6 +94,6 @@ class CourseUpdateView(UpdateView,LoginRequiredMixin):
 
 class CourseDeleteView(DeleteView,LoginRequiredMixin):
     model=Course
-    template_name=''
+    template_name='DelCourse'
     success_url='/dashboard'
 
