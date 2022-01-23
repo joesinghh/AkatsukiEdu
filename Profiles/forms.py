@@ -1,4 +1,4 @@
-from .models import User, Course, Chapter
+from .models import User, Course
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django import forms
 from validate_email import validate_email

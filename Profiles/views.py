@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import CreateUserForm, CreateTeacherForm
 from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView,CreateView,DeleteView,UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import *
 # Create your views here.
+from .forms import CreateTeacherForm
 
 def home(request):
     return render(request, "index.html")
@@ -20,6 +23,10 @@ def register(request):
 def tregister(request):
     form = CreateTeacherForm(request.POST or None)
     if form.is_valid():
+        obj = form.save(commit=False)
+        obj.is_teacher = True
+        obj.is_verified = False
+        obj.save()
         form.save()
         form=CreateTeacherForm()
         return redirect('login')
@@ -55,8 +62,30 @@ def terms(request):
 def browsecourses(request):
     return render(request, "BrowseCourses.html")
 
-    
 
 def privacy(request):
     return render(request, "privacy.html")
+
+class CourseCreateView(CreateView,LoginRequiredMixin):
+    model=Course
+    fields=[
+        'cover',
+        'title',
+        
+    ]
+    def form_valid(self,form):
+        form.instance.author=self.request.user
+        return super().form_valid(form)
+
+
+class CourseUpdateView(UpdateView,LoginRequiredMixin):
+    model=Course
+    fields=[
+        'cover' 
+    ]
+
+class CourseDeleteView(DeleteView,LoginRequiredMixin):
+    model=Course
+    template_name=''
+    success_url='/dashboard'
 
