@@ -43,6 +43,7 @@ def my_courses(request):
 @login_required
 def course_content(request, pk):
     scourse = Course.objects.get(id=pk)
+    user = User.objects.get(username=request.user)
     return render(request, "Course.html", locals())
 
 def contact(request):

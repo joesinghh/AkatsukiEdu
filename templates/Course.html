@@ -67,10 +67,18 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center">Price: $ 10</h5>
-                <a href="#" class="btn">Buy Now</a>
+                {% if user.is_teacher %}
+                
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Edit course
                 </button>
+                
+                {% else %}
+                
+                <a href="#" class="btn">Buy Now</a>
+                {% endif %}
+
+                
             </div>
         </div>
     </div>
