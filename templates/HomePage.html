@@ -57,7 +57,7 @@
                 <div class="card-body">
                 <h5 class="card-title text-wrap"><b>{{ c.title }}</b></h5>
                 <p class="card-text">A small description of the course goes here.</p>
-                <a href="./Course.html" class="btn btn-primary">View Course</a>
+                <a href="{% url 'course' c.id %}" class="btn btn-primary">View Course</a>
                 </div>
             </div>
         {% endfor %}

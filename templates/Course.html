@@ -46,12 +46,12 @@
     <div class="course-header">
         <div class="course-header-info">
             <div class="course-title">
-                <h3>Course Title</h3>
-                <p>About the course</p>
+                <h3>{{ scourse.title }}</h3>
+                <p>{{ scourse.date_created }}</p>
             </div>
             <div class="course-image">
                 <img src="../static/Images/User.png">
-                <p class="text-center">Name of Instructor</p>
+                <p class="text-center">{{ scourse.author }}</p>
             </div>
         </div>
     </div>
@@ -67,10 +67,18 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center">Price: $ 10</h5>
-                <a href="#" class="btn">Buy Now</a>
+                {% if user.is_teacher %}
+                
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Edit course
                 </button>
+                
+                {% else %}
+                
+                <a href="#" class="btn">Buy Now</a>
+                {% endif %}
+
+                
             </div>
         </div>
     </div>

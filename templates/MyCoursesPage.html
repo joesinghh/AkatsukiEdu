@@ -28,7 +28,7 @@
         <div class="links">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'dashboard' %">Home</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'dashboard' %}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'browsecourses' %}">Browse Courses</a>
@@ -45,6 +45,11 @@
     </div>
     {% if user.is_teacher %}
     {% if user.is_verified %}
+    <div class="modal-button">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create new course
+        </button>
+    </div>
 
     {% else %}
     <p>You are not yet verified</p>
@@ -73,14 +78,7 @@
         </a>
     </div>
 
-    <div class="modal-button">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Create new course
-        </button>
-    </div>
     {% endif %}
-
-
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
