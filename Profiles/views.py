@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import CreateUserForm, CreateTeacherForm
 from django.contrib.auth.decorators import login_required
-from .models import User
+from .models import *
 # Create your views here.
 
 def home(request):
@@ -29,6 +29,7 @@ def tregister(request):
 @login_required
 def dashboard(request):
     user = User.objects.get(username=request.user)
+    posts = Course.objects.all()
     return render(request, 'HomePage.html', locals())
 
 def about(request):
@@ -51,3 +52,4 @@ def terms(request):
 
 def privacy(request):
     return render(request, "privacy.html")
+
