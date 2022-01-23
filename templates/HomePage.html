@@ -51,6 +51,16 @@
     <div class="courses-list">
         <h3 class="list-title">Recently Added courses</h3>
         <div class="course-cards">
+        {% for c in posts %}
+            <div class="card" style="width: 18rem;">
+                <img src="{{ c.cover.url }}" class="card-img-top" alt="">
+                <div class="card-body">
+                <h5 class="card-title text-wrap"><b>{{ c.title }}</b></h5>
+                <p class="card-text">A small description of the course goes here.</p>
+                <a href="./Course.html" class="btn btn-primary">View Course</a>
+                </div>
+            </div>
+        {% endfor %}
             <div class="card" style="width: 18rem;">
                 <img src="../static/Images/default-course-photo.jpg" class="card-img-top" alt="">
                 <div class="card-body">
@@ -58,8 +68,14 @@
                 <p class="card-text">A small description of the course goes here.</p>
                 <a href="./Course.html" class="btn btn-primary">View Course</a>
                 </div>
-            </div>
-            <div class="card" style="width: 18rem;">
+            </div><div class="card" style="width: 18rem;">
+                <img src="../static/Images/default-course-photo.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                <h5 class="card-title text-wrap"><b>Course Title</b></h5>
+                <p class="card-text">A small description of the course goes here.</p>
+                <a href="./Course.html" class="btn btn-primary">View Course</a>
+                </div>
+            </div><div class="card" style="width: 18rem;">
                 <img src="../static/Images/default-course-photo.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                 <h5 class="card-title text-wrap"><b>Course Title</b></h5>
@@ -67,22 +83,7 @@
                 <a href="./Course.html" class="btn btn-primary">View Course</a>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="../static/Images/default-course-photo.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                <h5 class="card-title text-wrap"><b>Course Title</b></h5>
-                <p class="card-text">A small description of the course goes here.</p>
-                <a href="./Course.html" class="btn btn-primary">View Course</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="../static/Images/default-course-photo.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                <h5 class="card-title text-wrap"><b>Course Title</b></h5>
-                <p class="card-text">A small description of the course goes here.</p>
-                <a href="./Course.html" class="btn btn-primary">View Course</a>
-                </div>
-            </div>
+            
         </div>
     </div>
 
