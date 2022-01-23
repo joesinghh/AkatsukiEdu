@@ -13,6 +13,8 @@ urlpatterns = [
     path('contact' , views.contact, name='contact'),
     path('terms' , views.terms, name='terms'),
     path('privacy' , views.privacy, name='privacy'),
+    path('browsecourses' , views.browsecourses, name='browsecourses'),
+    path('course' , views.course, name='course'),
 
     path('mycourses',views.my_courses, name='mycourses'),
     path('course<int:pk>',views.course_content, name='course'),
