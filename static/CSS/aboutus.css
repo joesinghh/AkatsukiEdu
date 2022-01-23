@@ -1,0 +1,334 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+    margin-left: 200px;
+}
+
+.text-content {
+    width: 450px;
+    height: 410px;
+    left: 219px;
+    margin-top: 80px;
+    font-family: Manrope;
+    font-style: normal;
+    color: #18191F;
+}
+
+.text-content h1 {
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 80px;
+}
+
+.text-content h1 span {
+    background: linear-gradient(to right,#07065D, #00D4FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-content p {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.buttons {
+    width: 196px;
+    height: 62px;
+    background: #0E1237;
+    border-radius: 8px;
+    margin-right: 25px;
+    color: white;
+}
+
+/* all footer code */
+
+footer {
+      display: block;
+      margin-top: 100px;
+      font-size: 14px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      position: absolute;
+      box-sizing: border-box;
+      background-color: #0E1237;
+}
+
+.v8_440 {
+      width: 100%;
+      height: 280px;
+      background-repeat: no-repeat;
+      padding: 60px 0px;
+      text-align: center;
+      margin-left: 0px;
+      margin-right: 500px;
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+      background-color: #0E1237;
+}
+
+.v8_440 a {
+      color: white;
+      text-decoration: none;
+}
+
+.v8_441 {
+      width: 255px;
+      height: 148px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin: 24px;
+      opacity: 1;
+      position: absolute;
+      top: 64px;
+      left: 0px;
+      overflow: hidden;
+}
+.v8_442 {
+      width: 255px;
+      color: rgba(244,245,247,1);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Medium;
+      font-size: 18px;
+      opacity: 1;
+      text-align: left;
+}
+.v8_443 {
+      width: 255px;
+      height: 96px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 52px;
+      left: 0px;
+      overflow: hidden;
+}
+.v8_444 {
+      width: 255px;
+      color: rgba(238,239,244,1);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Regular;
+      font-size: 14px;
+      opacity: 1;
+      text-align: left;
+}
+.v8_445 {
+      width: 255px;
+      color: rgba(238,239,244,1);
+      position: absolute;
+      top: 36px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Regular;
+      font-size: 14px;
+      opacity: 1;
+      text-align: left;
+}
+.v8_447 {
+      width: 255px;
+      color: rgba(238,239,244,1);
+      position: absolute;
+      top: 72px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Regular;
+      font-size: 14px;
+      opacity: 1;
+      text-align: left;
+}
+.v25_132 {
+      width: 255px;
+      height: 124px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin: 24px;
+      opacity: 1;
+      position: absolute;
+      top: 64px;
+      left: 285px;
+      overflow: hidden;
+}
+.v25_133 {
+      width: 255px;
+      color: rgba(244,245,247,1);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Medium;
+      font-size: 18px;
+      opacity: 1;
+      text-align: left;
+}
+.v25_134 {
+      width: 255px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 52px;
+      left: 0px;
+      overflow: hidden;
+}
+.v25_135 {
+      width: 255px;
+      color: rgba(238,239,244,1);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Regular;
+      font-size: 14px;
+      opacity: 1;
+      text-align: left;
+}
+.v25_138 {
+      width: 255px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin: 12px;
+      opacity: 1;
+      position: absolute;
+      top: 100px;
+      left: 0px;
+      overflow: hidden;
+}
+.v8_454 {
+      width: 255px;
+      height: 112px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin: 24px;
+      opacity: 1;
+      position: absolute;
+      top: 64px;
+      left: 570px;
+      overflow: hidden;
+}
+.v8_455 {
+      width: 255px;
+      color: rgba(244,245,247,1);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Medium;
+      font-size: 18px;
+      opacity: 1;
+      text-align: left;
+}
+.v8_456 {
+      width: 255px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 52px;
+      left: 0px;
+      overflow: hidden;
+}
+.v8_458 {
+      width: 255px;
+      color: rgba(238,239,244,1);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Regular;
+      font-size: 14px;
+      opacity: 1;
+      text-align: left;
+}
+.v8_459 {
+      width: 255px;
+      color: rgba(238,239,244,1);
+      position: absolute;
+      top: 36px;
+      left: 0px;
+      font-family: Manrope;
+      font-weight: Regular;
+      font-size: 14px;
+      opacity: 1;
+      text-align: left;
+}
+
+html, body {
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 120px;
+}
+
+.name-text {
+    font-family: 'Manrope';
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.name-text span {
+    margin-left: 16px;
+}
+
+.nav {
+    display: flex;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 20px;
+    font-family: 'Manrope';
+    font-weight: bold;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #07065D;
+}
+
+.about h1{
+    text-align: center;
+    margin-top: 30px;
+    size: 40px;
+    color: #0E1237;
+}
+
+.about p {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
+    color: #0E1237;
+}
