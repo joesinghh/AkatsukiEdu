@@ -50,6 +50,12 @@ def contact(request):
 def terms(request):
     return render(request, "terms.html")
 
+def browsecourses(request):
+    return render(request, "BrowseCourses.html")
+
+def course(request):
+    return render(request, "Course.html")
+
 def privacy(request):
     return render(request, "privacy.html")
 
