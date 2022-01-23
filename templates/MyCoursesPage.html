@@ -35,7 +35,7 @@
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" aria-current="page">My Courses</a>
+                    <a class="nav-link active" href="{% url 'course' %}" aria-current="page">My Courses</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" aria-current="page">Edit Profile</a>
@@ -96,12 +96,8 @@
                     <input class="form-control" type="file" id="formFile">
                     <h5 class="label">Course Price</h5>
                     <input type="text" class="input-field">
-                    <div class="add-chapter">
-                        <h5 class="label">Chapter 1 Title</h5>
-                        <input type="text" class="input-field">
-                        <h5 class="label">Chapter Video</h5>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
+                    <h5 class="label">Course Video</h5>
+                    <input class="form-control" type="file" id="formFile">
                     <button class="new-chapter btn-primary">+ New Chapter</button>
                 </div>
                 <div class="modal-footer">
