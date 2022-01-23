@@ -1,4 +1,4 @@
-from .models import User, Course, Chapter
+from .models import User, Course
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django import forms
 from validate_email import validate_email
@@ -35,6 +35,11 @@ class CreateTeacherForm(UserCreationForm):
             'document'
             
         ]
+
+    def form_valid(self,form):
+        form.instance.is_verified=False
+        form.instance.is_teacher = True
+        return super().form_valid(form)
 
 class Login(AuthenticationForm):
     username=forms.CharField(label=None,widget=TextInput(attrs={'class':'validate','placeholder':'Username'}))

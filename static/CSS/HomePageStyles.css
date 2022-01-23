@@ -19,3 +19,8 @@
     background-color: #07065D;
     border-color: #07065D;
 }
+
+.card-img-top {
+    width: 286px;
+    height: 143px;
+}
