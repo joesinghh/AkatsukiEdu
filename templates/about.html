@@ -44,40 +44,57 @@
         </div>
     </div>
 
-    <div class="about">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="width: 100%;height: 70%;padding-top: 50px; padding-bottom: 50px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="image1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="image2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="image3.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+ <div class="about">
         <h1>About Us</h1>
         <p>We are a dedicated team working towards providing world class education in 0.001% cost of conventional
             bootcamps. We are a team of 4 people, and we all work remote since remote FTW! </p>
 
         <p>Our courses range from 10Rs - 100Rs only AND we get world class teachers - the best teachers from YouTube. We
-            wished we had a similar platform back then when we were starting out!.</p>
+            wished we had a similar platform back then when we were starting out!.</p><br><br>
     </div>
 
-
-    <footer>
-        <div class="v8_440" style="float: right;">
-            <div class="v8_441"><span class="v8_442" style="padding-left: 120px; float: right;"><a
-                        href="">Company</a></span>
-                <div class="v8_443"><span class="v8_444" style="padding-left: 120px; float: right;"><a
-                            href="{% url 'about' %}">About Us</a></span><span class="v8_445"
-                        style="padding-left: 120px; float: right;"><a href="">Blog</a></span><span class="v8_447"
-                        style="padding-left: 120px; float: right;"><a href="{% url 'contact' %}">Contact Us</a></span>
-                </div>
-            </div>
-
-            <div class="v25_132"><span class="v25_133" style="padding-left: 120px;"><a href="">Courses</a></span>
-                <div class="v25_134"><span class="v25_135" style="padding-left: 120px;"><a href="">Course
-                            List</a></span></div>
-            </div>
-            <div class="v8_454"><span class="v8_455" style="padding-left: 120px;">Legal</span>
-                <div class="v8_456"><span class="v8_458" style="padding-left: 120px;"><a
-                            href="{% url 'privacy' %}">Privacy Policy</a></span><span class="v8_459"
-                        style="padding-left: 120px;"><a href="{% url 'terms' %}">Terms of Service</a></span><br><br>
-                </div><br><br>
-            </div>
-
-        </div>
-    <footer>
+<div style="padding-top: 100px; background-color: #0E1237;">
+    
+</div>
 
 </body>
 
