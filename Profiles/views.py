@@ -40,7 +40,7 @@ def dashboard(request):
     return render(request, 'HomePage.html', locals())
 
 def about(request):
-    return render(request, "about.html")
+    return render(request, "aboutus.html")
 
 @login_required
 def my_courses(request):
