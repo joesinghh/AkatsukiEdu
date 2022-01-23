@@ -25,7 +25,7 @@
         <div class="links">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                   </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'about' %}">About Us</a>
@@ -44,28 +44,13 @@
         <img src="../static/Images/sign-up-banner.png" width="900px" height="550px">
         <form class="registration-form" method="POST">
             {% csrf_token %}
-            
-            {{ form.as_p }}
-            <!-- <p>Welcome Back</p>
+
+            <p>Hi There!</p>
             <h1>Registration Page</h1>
-            <h5>Name</h5>
-            <input type="text" class="input-field"></input>
-            <h5>Email</h5>
-            <input type="email" class="input-field"></input>
-            <h5>Password</h5>
-            <input type="password" class="input-field"></input><br>
-            <div class="radio-input">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                    Join as a teacher
-                </label><br>
+
+            <div class="form-content">
+                {{ form.as_p }}
             </div>
-            <div class="radio-input">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                    I am a teacher
-                </label>
-            </div> -->
 
             <button>Register</button>
             <p><a href="{% url 'signup' %}">Join as a Student</a></p>
@@ -74,5 +59,6 @@
             </p>
         </form>
     </div>
+    <script type="text/javascript" src="../static/JavaScript/SignUpPage.js"></script>
 </body>
 </html>

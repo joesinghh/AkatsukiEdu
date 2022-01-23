@@ -8,6 +8,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/CSS/LandingPageStyles.css">
     <link rel="stylesheet" type="text/css" href="../static/CSS/HeaderStyles.css">
+    <link rel="stylesheet" type="text/css" href="../static/CSS/about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
     <div class="header">
         <nav class="navbar navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand name-text" href="{% url 'home' %}">
+                <a class="navbar-brand name-text" href="index.html">
                     <img src="../static/Images/Logo.png" alt="" width="60" height="60" class="d-inline-block">
                     <span>Akatsuki</span>
                 </a>
@@ -27,14 +28,14 @@
         <div class="links">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'about' %}">About Us</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About Us</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}" aria-current="page">Login</a>
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'signup' %}" aria-current="page">Sign Up</a>
@@ -42,19 +43,28 @@
             </ul>
         </div>
     </div>
-    <div class="content">
-        <div class="text-content text-wrap">
-            <h1>Unleash <span>learning</span> online with the best teachers</h1>
-            <p>Learn from Youtube's most loved teachers from around the world</p>
-            <div>
-                <button class="buttons">Learn More</button>
-                <a href="{% url 'signup' %}">
-                    <button class="buttons">Sign Up Now</button>
-                </a>
-            </div>
-        </div>
-        <img src="../static/Images/online-courses-image.png" width="600px" height="600px">
+
+    <div class="about">
+        <h1>Akatsuki Privacy Policy</h1>
+        <p>By using our products, you agree to our Terms of Service.</p>
+
+        <p>The Akatsuki Network is a set of related Internet sites and other applications for questions and answers
+            (also referred to herein as the “Network”), owned and operated by Akatsuki, Inc. (“Akatsuki”, “we” or “us”),
+            a Akatsuki corporation. Akatsuki welcomes you to the Network, the largest community of developers in the
+            world, and invites you to participate in the community by sharing knowledge with your peers and colleagues.
+            Like all communities, we ask that you participate in a manner that respects your fellow community members.
+            To that end, we provide you with these terms of service to advise you of the legal obligations you assume
+            when you engage with the Akatsuki community or otherwise access or use the public Network or any services
+            provided on the public Network (collectively, “Services”). These terms govern the use of the public Network
+            (the “Public Network Terms”).</p>
+
+        <p>To the extent you are accessing or using our other products on behalf of a Company or Team, including without
+            limitation by registering for an account on behalf of a Company or Team, your use of those products (such as
+            Akatsuki for Teams or Akatsuki Business) is governed by their relevant Terms and Conditions.</p>
+
+        <p>ps: this is a demo Terms and Conditions, none of which is true</p>
     </div>
+
 
     <footer>
         <div class="v8_440" style="float: right;">
