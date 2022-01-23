@@ -53,13 +53,18 @@
                 <img src="../static/Images/User.png">
                 <p class="text-center">{{ scourse.author }}</p>
             </div>
+            
         </div>
     </div>
     <div class="course-content">
         <div class="course-syllabus">
             <h3>Course Content</h3>
             <p>Throughout the course, you will learn the following modules: </p>
+            <video controls width="500" height="200" >
+                <source src="{{ scourse.video.url }}" type="video/mp4"> 
+            </video>
             <div class="syllabus">
+                
                 <button class="chapterTitles">Chapter 1</button><br>
                 <button class="chapterTitles">Chapter 2</button><br>
             </div>

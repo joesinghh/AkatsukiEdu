@@ -80,5 +80,7 @@ class Course(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     video = models.FileField(upload_to='videos')
     content = models.TextField(blank=True)
+    desc = models.CharField(max_length=100)
+    price = models.IntegerField(default=10)
 
 
