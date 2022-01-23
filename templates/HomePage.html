@@ -34,7 +34,7 @@
 
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Browse Courses</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'browsecourses' %}">Browse Courses</a>
                 </li>
                 {% endif %}
             
@@ -43,7 +43,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" aria-current="page">Edit Profile</a>
+                    <a class="nav-link" href="{% url 'home' %}" aria-current="page">Log out</a>
                 </li>
             </ul>
         </div>
