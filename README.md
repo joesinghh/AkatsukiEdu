@@ -1,4 +1,4 @@
-# Akatsuki_URH
+# AkatsukiEdu
 
 A web app built for the [UnScript Rookies Hackathon 2k22](https://unscript-rookies.netlify.app/).
 
